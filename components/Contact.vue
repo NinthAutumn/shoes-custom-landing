@@ -1,45 +1,45 @@
 <template>
   <div id="contact">
-    <client-only>
-      <form
-        method="POST"
-        action="/contact"
-        class="contact-form"
-        netlify
-        name="contactus"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        data-netlify-recaptcha="true"
-      >
-        <input type="hidden" name="form-name" value="contactus" />
-        <h3 style="text-align: center">お問い合わせ</h3>
-        <label for="reason">ご用件</label>
-        <select name="ご用件" id="ご用件">
-          <option>選択してください</option>
-          <option value="予約希望日選択">予約希望日選択</option>
-          <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
-        </select>
-        <label for="name">お名前※</label>
-        <input required type="text" name="name" placeholder="お名前" />
-        <label for="phone_number">電話番号※</label>
-        <input
-          required
-          type="text"
-          name="phone_number"
-          placeholder="07012345678"
-        />
-        <label for="email">Eメール</label>
-        <input type="email" name="email" placeholder="sample@sample.com" />
-        <label for="content">ご予約希望日時（ご質問・お問い合わせ内容）</label>
-        <textarea
-          name="content"
-          placeholder="ご予約希望日時（ご質問・お問い合わせ内容）"
-          cols="30"
-          rows="10"
-        ></textarea>
-        <button type="submit">確認</button>
-      </form>
-    </client-only>
+    <!-- <client-only> -->
+    <form
+      method="POST"
+      action=""
+      class="contact-form"
+      netlify
+      name="contactus"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
+    >
+      <input type="hidden" name="form-name" value="contactus" />
+      <h3 style="text-align: center">お問い合わせ</h3>
+      <label for="reason">ご用件</label>
+      <select name="ご用件" id="ご用件">
+        <option>選択してください</option>
+        <option value="予約希望日選択">予約希望日選択</option>
+        <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
+      </select>
+      <label for="name">お名前※</label>
+      <input required type="text" name="name" placeholder="お名前" />
+      <label for="phone_number">電話番号※</label>
+      <input
+        required
+        type="text"
+        name="phone_number"
+        placeholder="07012345678"
+      />
+      <label for="email">Eメール</label>
+      <input type="email" name="email" placeholder="sample@sample.com" />
+      <label for="content">ご予約希望日時（ご質問・お問い合わせ内容）</label>
+      <textarea
+        name="content"
+        placeholder="ご予約希望日時（ご質問・お問い合わせ内容）"
+        cols="30"
+        rows="10"
+      ></textarea>
+      <button type="submit">確認</button>
+    </form>
+    <!-- </client-only> -->
   </div>
 </template>
 
