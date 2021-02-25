@@ -137,6 +137,12 @@ export default {
   flex-direction: column;
   box-sizing: border-box;
 }
+
+@media screen and (min-width: 850px) {
+  .contact-form {
+    width: 80rem;
+  }
+}
 label {
   font-size: 2rem;
 }
