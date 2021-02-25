@@ -3,7 +3,7 @@
     <client-only>
       <form
         method="POST"
-        action="/"
+        action="/contact"
         class="contact-form"
         netlify
         name="contactus"
