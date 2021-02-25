@@ -311,6 +311,7 @@ h4 {
     position: relative;
     width: 100%;
     display: flex;
+    padding: 1rem;
     /* height: 300px; */
     /* padding: 10px; */
     justify-content: center;
@@ -343,7 +344,8 @@ h4 {
     text-align: center;
   }
   button {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
+    padding: 1.5rem 5rem;
   }
 }
 
