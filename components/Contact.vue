@@ -1,7 +1,16 @@
 <template>
   <div id="contact">
     <client-only>
-      <form method="POST" class="contact-form" netlify data-netlify="true">
+      <form
+        method="POST"
+        action="/"
+        class="contact-form"
+        netlify
+        name="contactus"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contactus" />
         <h3 style="text-align: center">お問い合わせ</h3>
         <label for="reason">ご用件</label>
         <select name="ご用件" id="ご用件">
