@@ -80,6 +80,15 @@
       </div>
       <div class="container">
         <div class="title">
+          <h3 style="padding-left: 0.5rem">商品の一覧</h3>
+          <div class="line-horizontal" style="width: 24rem"></div>
+        </div>
+        <client-only>
+          <product-list></product-list>
+        </client-only>
+      </div>
+      <div class="container">
+        <div class="title">
           <h3 style="padding-left: 0.5rem">
             <span style="color: var(--secondary-color); font-style: italic"
               >Rio's </span
@@ -89,7 +98,6 @@
         </div>
         <rio-story></rio-story>
       </div>
-      <div class="container"></div>
     </main>
     <contact-form></contact-form>
   </div>
@@ -98,6 +106,7 @@
 <script>
 import ContactForm from '~/components/Contact'
 import RioStory from '~/components/RioStory'
+import ProductList from '~/components/ProductList'
 export default {
   data: () => ({
     list: [
@@ -164,6 +173,7 @@ export default {
   components: {
     ContactForm,
     RioStory,
+    ProductList,
   },
 }
 </script>

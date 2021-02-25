@@ -220,6 +220,8 @@ export default {
   right: 10px;
   color: rgb(163, 163, 163);
   font-size: 2.5rem;
+  cursor: pointer;
+  user-select: none;
 }
 .story-modal .blur {
   position: absolute;
