@@ -32,11 +32,11 @@
         name="携帯番号"
         placeholder="07012345678"
       />
-      <label for="Eメール">Eメール</label>
+      <label for="email">Eメール</label>
       <input
         v-model="form.Eメール"
         type="email"
-        name="Eメール"
+        name="email"
         placeholder="sample@sample.com"
       />
       <label for="コンテンツ">ご予約希望日時（ご質問・お問い合わせ内容）</label>
@@ -66,7 +66,7 @@ export default {
   },
   data: () => ({
     form: {
-      Eメール: '',
+      email: '',
       携帯番号: '',
       コンテンツ: '',
       ご用件: '',
@@ -95,17 +95,21 @@ export default {
         },
         body: JSON.stringify({
           ...this.form,
-          'g-recaptcha-response': this.gcaptcha,
+          // 'g-recaptcha-response': this.gcaptcha,
         }),
-      }).then(() => {
-        alert('お問い合わせありがとうございます。')
-        this.form = {
-          Eメール: '',
-          携帯番号: '',
-          コンテンツ: '',
-          ご用件: '',
-        }
       })
+        .then(() => {
+          alert('お問い合わせありがとうございます。')
+          this.form = {
+            email: '',
+            携帯番号: '',
+            コンテンツ: '',
+            ご用件: '',
+          }
+        })
+        .catch(function (error) {
+          console.error(error)
+        })
     },
   },
 }
@@ -118,9 +122,12 @@ export default {
   --contact-color: rgb(201, 201, 201);
   background: #040a11;
 }
-
+@media screen and (min-width: 750px) {
+  .contact-form {
+    padding: 2rem 4rem;
+  }
+}
 .contact-form {
-  padding: 2rem 4rem;
   margin-top: 2rem;
   /* background: white; */
   color: var(--contact-color);

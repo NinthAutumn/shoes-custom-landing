@@ -87,6 +87,7 @@
           </h3>
           <div class="line-horizontal" style="width: 24rem"></div>
         </div>
+        <rio-story></rio-story>
       </div>
       <div class="container"></div>
     </main>
@@ -96,6 +97,7 @@
 
 <script>
 import ContactForm from '~/components/Contact'
+import RioStory from '~/components/RioStory'
 export default {
   data: () => ({
     list: [
@@ -161,6 +163,7 @@ export default {
   },
   components: {
     ContactForm,
+    RioStory,
   },
 }
 </script>
@@ -186,9 +189,19 @@ h3 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 750px) {
+  .container {
+    padding: 2rem 5rem;
+  }
+}
 
+@media screen and (max-width: 750px) {
+  .container {
+    padding: 2rem 5rem;
+    padding-right: 1rem;
+  }
+}
 .container {
-  padding: 2.5rem 5rem;
   position: relative;
 }
 .line {
