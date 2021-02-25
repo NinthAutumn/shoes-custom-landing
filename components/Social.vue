@@ -1,6 +1,6 @@
 <template>
   <div class="social-card">
-    <a href="https://instagram.com" class="social-item" style="color: #dd2a7c">
+    <a href="https://instagram.com" class="social-item" style="color: white">
       <f-a
         :icon="{
           prefix: 'fab',
@@ -8,7 +8,7 @@
         }"
       ></f-a>
     </a>
-    <a href="https://line.com" class="social-item" style="color: #01b302">
+    <a href="https://line.com" class="social-item" style="color: white">
       <f-a
         :icon="{
           prefix: 'fab',
@@ -19,7 +19,7 @@
     <a
       href="mailto:someone@yoursite.com"
       class="social-item"
-      style="margin-right: 0rem"
+      style="margin-right: 0rem; color: white"
     >
       <f-a
         :icon="{
@@ -38,7 +38,7 @@ export default {}
 <style >
 .social-card {
   width: 100%;
-  background: #040a10;
+  margin-top: 50px;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -49,7 +49,12 @@ export default {}
   height: 5rem;
   width: 5rem;
   border-radius: 10rem;
-  background: white;
+  background: rgb(4, 33, 56);
+  background: linear-gradient(
+    90deg,
+    rgb(4, 25, 43) 22%,
+    rgba(2, 12, 20, 1) 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;

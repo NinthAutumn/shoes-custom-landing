@@ -98,9 +98,11 @@
         </div>
         <rio-story></rio-story>
       </div>
+      <contact-form></contact-form>
+      <social-card></social-card>
+      <!-- <hr style="border-color: var(--secondary-color)" /> -->
+      <FooterCard></FooterCard>
     </main>
-    <social-card></social-card>
-    <contact-form></contact-form>
   </div>
 </template>
 
@@ -109,6 +111,7 @@ import ContactForm from '~/components/Contact'
 import RioStory from '~/components/RioStory'
 import ProductList from '~/components/ProductList'
 import SocialCard from '~/components/Social'
+import FooterCard from '~/components/Footer'
 export default {
   data: () => ({
     list: [
@@ -177,6 +180,7 @@ export default {
     RioStory,
     ProductList,
     SocialCard,
+    FooterCard,
   },
 }
 </script>
