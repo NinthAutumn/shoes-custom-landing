@@ -1,29 +1,33 @@
 <template>
   <div class="social-card">
-    <div class="social-item" style="color: #dd2a7c">
+    <a href="https://instagram.com" class="social-item" style="color: #dd2a7c">
       <f-a
         :icon="{
           prefix: 'fab',
           iconName: 'instagram',
         }"
       ></f-a>
-    </div>
-    <div class="social-item" style="color: #01b302">
+    </a>
+    <a href="https://line.com" class="social-item" style="color: #01b302">
       <f-a
         :icon="{
           prefix: 'fab',
           iconName: 'line',
         }"
       ></f-a>
-    </div>
-    <div class="social-item" style="margin-right: 0rem">
+    </a>
+    <a
+      href="mailto:someone@yoursite.com"
+      class="social-item"
+      style="margin-right: 0rem"
+    >
       <f-a
         :icon="{
           prefix: 'far',
           iconName: 'envelope',
         }"
       ></f-a>
-    </div>
+    </a>
   </div>
 </template>
 
