@@ -50,16 +50,12 @@ export default {}
   }
 }
 .social-item {
-  height: 8rem;
-  width: 8rem;
-  font-size: 3rem;
+  height: 10rem;
+  width: 10rem;
+  font-size: 5rem;
   border-radius: 10rem;
   background: rgb(4, 33, 56);
-  background: linear-gradient(
-    90deg,
-    rgb(4, 25, 43) 22%,
-    rgba(2, 12, 20, 1) 100%
-  );
+  background: linear-gradient(90deg, rgb(0, 0, 0) 22%, rgb(4, 22, 37) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
