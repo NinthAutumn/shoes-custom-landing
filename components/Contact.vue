@@ -12,7 +12,9 @@
       <h3 style="text-align: center">お問い合わせ</h3>
       <label for="ご用件">ご用件</label>
       <select v-model="form.ご用件" name="ご用件" id="ご用件">
-        <option>選択してください</option>
+        <option value="選択してください" disabled selected>
+          選択してください
+        </option>
         <option value="予約希望日選択">予約希望日選択</option>
         <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
       </select>
@@ -69,7 +71,7 @@ export default {
       email: '',
       携帯番号: '',
       コンテンツ: '',
-      ご用件: '',
+      ご用件: '選択してください',
       名前: '',
     },
     gcaptcha: '',
