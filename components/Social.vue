@@ -39,15 +39,20 @@ export default {}
 .social-card {
   width: 100%;
   margin-top: 50px;
-  height: 100px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+@media screen and (max-width: 750px) {
+  .social-item {
+  }
+}
 .social-item {
-  height: 5rem;
-  width: 5rem;
+  height: 8rem;
+  width: 8rem;
+  font-size: 3rem;
   border-radius: 10rem;
   background: rgb(4, 33, 56);
   background: linear-gradient(
@@ -59,7 +64,7 @@ export default {}
   justify-content: center;
   align-items: center;
   color: var(--primary-color);
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
   /* background: #c9c9c9; */
   margin-right: 4rem;
   cursor: pointer;
