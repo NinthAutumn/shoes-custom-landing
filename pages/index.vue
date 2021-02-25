@@ -182,6 +182,18 @@ export default {
 .title {
   position: relative;
 }
+.header-content {
+  animation: appear-header 200ms linear;
+}
+
+@keyframes appear-header {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 
 .product-log {
   position: absolute;
@@ -265,7 +277,14 @@ h4 {
   padding-left: 2rem;
   font-size: 2rem;
 }
-
+@keyframes banner-animation {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .black-back {
   background-image: url('~/assets/banner.jpg');
   background-position: center;
@@ -273,6 +292,8 @@ h4 {
   background-size: cover;
   position: absolute;
   height: 100%;
+  animation: banner-animation 500ms ease-in-out;
+  /* background-color: #606568; */
   width: 100%;
   /* background: black; */
   left: 0;
