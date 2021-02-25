@@ -55,6 +55,7 @@ button,
   font-family: 'Shippori Mincho', serif;
   --secondary-color: #b8ab78;
   --primary-color: #041a2b;
+  --contact-color: rgb(233, 233, 233);
 }
 html {
   font-size: 10px;
@@ -66,7 +67,7 @@ input {
 }
 body {
   background: var(--primary-color);
-  color: white;
+  color: var(--contact-color);
 }
 button {
   font-size: 16px;

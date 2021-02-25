@@ -121,8 +121,8 @@ export default {
 #contact {
   display: flex;
   justify-content: center;
-  --contact-color: rgb(247, 247, 247);
-  /* background: #040a11; */
+
+  background: var(--primary-color);
 }
 @media screen and (min-width: 750px) {
   .contact-form {

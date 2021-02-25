@@ -74,7 +74,7 @@
           <h3 style="padding-left: 0.5rem">実績</h3>
           <div class="line-horizontal" style="width: 15rem"></div>
         </div>
-
+        <step-list> </step-list>
         <!-- <h4></h4> -->
         <h4 style="padding-left: 0.5rem">お客様の声</h4>
       </div>
@@ -99,10 +99,10 @@
         <rio-story></rio-story>
       </div>
       <contact-form></contact-form>
-      <social-card></social-card>
-      <!-- <hr style="border-color: var(--secondary-color)" /> -->
-      <FooterCard></FooterCard>
     </main>
+    <social-card></social-card>
+    <!-- <hr style="border-color: var(--secondary-color)" /> -->
+    <FooterCard></FooterCard>
   </div>
 </template>
 
@@ -112,6 +112,7 @@ import RioStory from '~/components/RioStory'
 import ProductList from '~/components/ProductList'
 import SocialCard from '~/components/Social'
 import FooterCard from '~/components/Footer'
+import StepList from '~/components/StepBy'
 export default {
   data: () => ({
     list: [
@@ -181,6 +182,7 @@ export default {
     ProductList,
     SocialCard,
     FooterCard,
+    StepList,
   },
 }
 </script>
@@ -238,7 +240,7 @@ h3 {
   content: '';
   width: 1px;
   border-radius: 10rem;
-  background: rgb(156, 156, 156);
+  background: var(--secondary-color);
   height: 100%;
   left: 5rem;
   opacity: 0.9;
@@ -263,7 +265,7 @@ h3 {
   position: absolute;
   content: '';
   height: 1px;
-  background: rgb(156, 156, 156);
+  background: var(--secondary-color);
   bottom: 0;
   /* left: -40px; */
   width: 100%;
