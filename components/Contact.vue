@@ -1,7 +1,7 @@
 <template>
   <div id="contact">
     <client-only>
-      <form action="" class="contact-form" netlify>
+      <form method="POST" class="contact-form" netlify data-netlify="true">
         <h3 style="text-align: center">お問い合わせ</h3>
         <label for="reason">ご用件</label>
         <select name="ご用件" id="ご用件">
