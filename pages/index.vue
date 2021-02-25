@@ -99,6 +99,7 @@
         <rio-story></rio-story>
       </div>
     </main>
+    <social-card></social-card>
     <contact-form></contact-form>
   </div>
 </template>
@@ -107,6 +108,7 @@
 import ContactForm from '~/components/Contact'
 import RioStory from '~/components/RioStory'
 import ProductList from '~/components/ProductList'
+import SocialCard from '~/components/Social'
 export default {
   data: () => ({
     list: [
@@ -174,6 +176,7 @@ export default {
     ContactForm,
     RioStory,
     ProductList,
+    SocialCard,
   },
 }
 </script>
