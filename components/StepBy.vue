@@ -24,7 +24,7 @@
         <div class="step-index">Step 2</div>
         <p>必要事項のご入力、御来店日の決定</p>
       </div>
-      <div class="step-item">
+      <div class="step-item" style="margin-right: 0">
         <div class="step-index">Step 3</div>
         <p>サロンへ御来店/出張へお伺い</p>
       </div>
@@ -70,25 +70,36 @@ export default {}
 @media screen and (min-width: 850px) {
   .step-container {
     grid-template-columns: repeat(3, minmax(20rem, 35rem));
-    grid-template-areas: 'main main main';
-    gap: 20px;
+    /* grid-template-areas: 'main main main'; */
   }
-  /* .step-item {
-    margin-right: 20px;
-    margin-bottom: 20px;
-  } */
+  @supports (gap: 20px) {
+    .step-container {
+      gap: 20px;
+    }
+  }
+  @supports not (gap: 20px) {
+    .step-item {
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @media screen and (max-width: 850px) {
   .step-container {
     grid-template-columns: repeat(1, 1fr);
     /* grid-template-areas: 'main'; */
-    gap: 20px;
   }
-  /* @supports (display) */
-  .step-item {
-    /* margin-right: 20px; */
-    /* margin-bottom: 20px; */
+  @supports (gap: 20px) {
+    .step-container {
+      gap: 20px;
+    }
+  }
+  @supports not (gap: 20px) {
+    .step-item {
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
   }
 }
 
