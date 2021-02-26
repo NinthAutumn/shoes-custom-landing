@@ -69,7 +69,7 @@ export default {
   font-size: 2rem;
 }
 .swiper-pagination-bullet {
-  background: white;
+  background: white !important;
 }
 .test-card #swiper-pagination {
   bottom: 0px !important;
