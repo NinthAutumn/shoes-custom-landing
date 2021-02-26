@@ -65,10 +65,13 @@ export default {}
   /* border-radius: 0.5rem; */
   padding: 2rem;
   /* margin-bottom: 10rem; */
+  /* grid-area: main; */
 }
 @media screen and (min-width: 850px) {
   .step-container {
     grid-template-columns: repeat(3, minmax(20rem, 35rem));
+    grid-template-areas: 'main main main';
+    gap: 20px;
   }
   /* .step-item {
     margin-right: 20px;
@@ -79,14 +82,14 @@ export default {}
 @media screen and (max-width: 850px) {
   .step-container {
     grid-template-columns: repeat(1, 1fr);
-
+    /* grid-template-areas: 'main'; */
     gap: 20px;
   }
   /* @supports (display) */
-  /* .step-item {
-    margin-right: 20px;
-    margin-bottom: 20px;
-  } */
+  .step-item {
+    /* margin-right: 20px; */
+    /* margin-bottom: 20px; */
+  }
 }
 
 .step-item .step-one {
