@@ -315,9 +315,10 @@ h4 {
     opacity: 1;
   }
 }
+
 .black-back {
   background-image: url('~/assets/banner.jpg');
-  background-position: bottom;
+  background-position: 0 75%;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
