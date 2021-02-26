@@ -87,7 +87,8 @@ export default {
 }
 @media screen and (min-width: 952px) {
   .jisseki-list {
-    grid-template-areas: 'left top right';
+    display: grid;
+    grid-template-areas: 'left top right' !important;
 
     /* display: grid; */
     /* grid-template-areas: 'top top' 'left right'; */
