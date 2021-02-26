@@ -16,7 +16,27 @@
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    this.observeLines()
+  },
+  methods: {
+    observeLines() {
+      const observe = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('jisseki-in')
+            observe.unobserve(entry.target)
+          }
+        })
+      })
+      const list = document.querySelectorAll('.jisseki-item')
+      list.forEach((item) => {
+        observe.observe(item)
+      })
+    },
+  },
+}
 </script>
 
 <style >
@@ -24,6 +44,26 @@ export default {}
   display: flex;
   width: 100%;
   justify-content: center;
+}
+.jisseki-in {
+  visibility: visible !important;
+
+  animation: jisseki 200ms ease-in-out;
+}
+
+@keyframes jisseki {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.jisseki-item {
+  visibility: hidden;
 }
 .jisseki-item--one {
   grid-area: left;

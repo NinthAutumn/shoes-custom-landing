@@ -178,12 +178,12 @@ export default {
     },
     observeLines() {
       const observe = new IntersectionObserver((entries) => {
-        const entry = entries.find((entry) => entry.isIntersecting)
-
-        if (entry) {
-          entry.target.classList.add('line-in')
-          observe.unobserve(entry.target)
-        }
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('line-in')
+            observe.unobserve(entry.target)
+          }
+        })
       })
       const list = document.querySelectorAll('.line-horizontal')
       list.forEach((item) => {
