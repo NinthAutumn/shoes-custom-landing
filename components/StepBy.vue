@@ -3,7 +3,7 @@
     <div class="step-container">
       <div class="step-item">
         <div class="step-index">Step 1</div>
-        <p>問い合わせLINE/フォーム</p>
+        <p>問い合わせLINE追加/フォーム入力</p>
         <button style="margin: 0 auto; display: block">始める</button>
         <!-- <img
           class="step-one"
@@ -17,15 +17,15 @@
 
       <div class="step-item">
         <div class="step-index">Step 2</div>
-        <p>必要事項のご記入</p>
+        <p>必要事項のご入力、御来店日の決定</p>
       </div>
       <div class="step-item">
         <div class="step-index">Step 3</div>
-        <p>サロンへ御来店/出張</p>
+        <p>サロンへ御来店/出張へお伺い</p>
       </div>
       <div class="step-item">
         <div class="step-index">Step 4</div>
-        <p>デザインを決める</p>
+        <p>デザインの選択/サイズ測定</p>
       </div>
       <div class="step-item">
         <div class="step-index">Step 5</div>
@@ -63,7 +63,7 @@ export default {}
 }
 @media screen and (min-width: 850px) {
   .step-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(20rem, 35rem));
     gap: 20px;
   }
 }

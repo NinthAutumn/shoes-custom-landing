@@ -13,6 +13,10 @@ export default {
         content: 'width=device-width, initial-scale=1'
       },
       {
+        hid: 'title',
+        name: 'title',
+        content: '世界が認めた日本初のラグジュアリーオーダーシューズブランド Rio'
+      }, {
         hid: 'description',
         name: 'description',
         content: ''

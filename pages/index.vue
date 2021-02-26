@@ -74,7 +74,7 @@
           <h3 style="padding-left: 0.5rem">実績</h3>
           <div class="line-horizontal" style="width: 15rem"></div>
         </div>
-        <step-list> </step-list>
+
         <!-- <h4></h4> -->
         <h4 style="padding-left: 0.5rem">お客様の声</h4>
       </div>
@@ -97,6 +97,13 @@
           <div class="line-horizontal" style="width: 24rem"></div>
         </div>
         <rio-story></rio-story>
+      </div>
+      <div class="container">
+        <div class="title">
+          <h3 style="padding-left: 0.5rem">購入の流れ</h3>
+          <div class="line-horizontal" style="width: 15rem"></div>
+        </div>
+        <step-list> </step-list>
       </div>
       <contact-form></contact-form>
     </main>
