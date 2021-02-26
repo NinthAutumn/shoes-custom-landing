@@ -1,6 +1,6 @@
 <template>
   <div class="social-card">
-    <a href="https://instagram.com" class="social-item" style="color: white">
+    <a href="https://www.instagram.com/ordershoes_rio/" class="social-item" style="color: white">
       <f-a
         :icon="{
           prefix: 'fab',
@@ -17,7 +17,7 @@
       ></f-a>
     </a>
     <a
-      href="mailto:someone@yoursite.com"
+      href="mailto:info@a-starone.com"
       class="social-item"
       style="margin-right: 0rem; color: white"
     >

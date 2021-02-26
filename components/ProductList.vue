@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 100%" class="slides">
+  <div style="width: 100%" class="slides product-list">
     <!-- Using the slider component -->
     <swiper :options="swiperOptions">
       <swiper-slide v-for="item of list" :key="item.img">
@@ -7,7 +7,6 @@
           <img :src="item.img" alt="" />
         </div>
       </swiper-slide>
-      <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>
 </template>
@@ -25,11 +24,9 @@ export default {
     swiperOptions: {
       slidesPerView: 'auto',
       spaceBetween: 15,
-      pagination: {
-        el: '.swiper-pagination',
-      },
+
       autoplay: {
-        delay: 1000,
+        // delay: 1000,
       },
     },
   }),
@@ -38,18 +35,19 @@ export default {
 
 <style >
 @media screen and (max-width: 750px) {
-  .swiper-slide {
+  .product-list .swiper-slide {
     width: 200px !important;
   }
-  .swiper-slide img {
+  .product-list .swiper-slide img {
     width: 200px !important;
   }
 }
-.swiper-slide .img-container {
+
+.product-list .swiper-slide .img-container {
   padding-top: 71%;
   /* height: 213px; */
 }
-.swiper-slide img {
+.product-list .swiper-slide img {
   display: block;
   /* max-width: 100%; */
   max-height: 100%;
@@ -60,10 +58,10 @@ export default {
   right: 0;
 }
 @media screen and (min-width: 750px) {
-  .swiper-slide {
+  .product-list .swiper-slide {
     width: 300px !important;
   }
-  .swiper-slide img {
+  .product-list .swiper-slide img {
     width: 300px !important;
   }
 }

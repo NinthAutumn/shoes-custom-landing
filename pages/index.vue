@@ -77,6 +77,7 @@
         <jisseki-card></jisseki-card>
         <!-- <h4></h4> -->
         <h4 style="padding-left: 0.5rem">お客様の声</h4>
+        <testimonial-card></testimonial-card>
       </div>
       <div class="container">
         <div class="title">
@@ -121,6 +122,7 @@ import SocialCard from '~/components/Social'
 import FooterCard from '~/components/Footer'
 import StepList from '~/components/StepBy'
 import JissekiCard from '~/components/Jisseki'
+import TestimonialCard from '~/components/Testimonial'
 export default {
   data: () => ({
     list: [
@@ -192,6 +194,7 @@ export default {
     FooterCard,
     StepList,
     JissekiCard,
+    TestimonialCard,
   },
 }
 </script>
