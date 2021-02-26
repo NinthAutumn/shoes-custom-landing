@@ -76,7 +76,7 @@ export default {
 }
 @media screen and (min-width: 952px) {
   .jisseki-list {
-    display: flex !important;
+    grid-template-areas: 'left top right';
 
     /* display: grid; */
     /* grid-template-areas: 'top top' 'left right'; */
@@ -108,6 +108,8 @@ export default {
 }
 @media screen and (max-width: 570px) {
   .jisseki-list {
+    display: grid;
+    grid-template-areas: 'top' 'left' 'right';
     /* display: block !important; */
   }
   .jisseki-item--two {

@@ -343,6 +343,9 @@ h4 {
   }
 }
 @media screen and (max-width: 750px) {
+  .black-back {
+    background-position: 40% 75%;
+  }
   .product-log {
     position: absolute;
     right: 10px;
