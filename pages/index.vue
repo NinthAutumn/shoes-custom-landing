@@ -25,7 +25,9 @@
             <span style="color: var(--secondary-color)">Rio</span>
           </h1>
           <h2>『世界で1番の靴をあなたが創る』</h2>
-          <button @click="scrollToContact">ご購入へ</button>
+          <button style="margin-bottom: 0rem" @click="scrollToContact">
+            ご購入へ
+          </button>
         </div>
       </div>
     </div>
@@ -315,7 +317,7 @@ h4 {
 }
 .black-back {
   background-image: url('~/assets/banner.jpg');
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -362,6 +364,7 @@ h4 {
     width: 100%;
     display: flex;
     padding: 1rem;
+
     /* height: 300px; */
     /* padding: 10px; */
     justify-content: center;
@@ -391,7 +394,7 @@ h4 {
     font-size: 2.2rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
   .header-content {
     text-align: center;
@@ -435,6 +438,7 @@ h4 {
     height: 100%;
     /* padding-top: -70%; */
     padding: 20px;
+    /* padding-bottom: 0.5rem !important; */
     max-height: 100vh;
     justify-content: flex-end;
     align-items: flex-end;
@@ -472,6 +476,8 @@ h4 {
     /* margin-right: 5rem; */
     display: flex;
     flex-direction: column;
+    /* background: rgba(0, 0, 0, 0.014); */
+    padding-right: 1rem;
   }
   button {
     align-self: flex-end;
