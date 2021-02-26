@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="header-container">
-      <div class="header-banner container">
+      <div class="header-banner container" style="min-height: 445.59px">
         <div class="black-back"></div>
         <img class="logo" lazy :src="require('~/assets/logo.png')" alt="" />
 
@@ -74,7 +74,7 @@
           <h3 style="padding-left: 0.5rem">実績</h3>
           <div class="line-horizontal" style="width: 15rem"></div>
         </div>
-
+        <jisseki-card></jisseki-card>
         <!-- <h4></h4> -->
         <h4 style="padding-left: 0.5rem">お客様の声</h4>
       </div>
@@ -101,9 +101,9 @@
       <div class="container">
         <div class="title">
           <h3 style="padding-left: 0.5rem">購入の流れ</h3>
-          <div class="line-horizontal" style="width: 15rem"></div>
+          <div class="line-horizontal" style="width: 25rem"></div>
         </div>
-        <step-list> </step-list>
+        <step-list @contact="scrollToContact"> </step-list>
       </div>
       <contact-form></contact-form>
     </main>
@@ -120,6 +120,7 @@ import ProductList from '~/components/ProductList'
 import SocialCard from '~/components/Social'
 import FooterCard from '~/components/Footer'
 import StepList from '~/components/StepBy'
+import JissekiCard from '~/components/Jisseki'
 export default {
   data: () => ({
     list: [
@@ -190,6 +191,7 @@ export default {
     SocialCard,
     FooterCard,
     StepList,
+    JissekiCard,
   },
 }
 </script>
@@ -199,7 +201,7 @@ export default {
   position: relative;
 }
 .header-content {
-  animation: appear-header 200ms linear;
+  /* animation: appear-header 200ms linear; */
 }
 
 @keyframes appear-header {
@@ -237,6 +239,7 @@ h3 {
   .container {
     padding: 2rem 5rem;
     padding-right: 1rem;
+    /* min-height: 445.59px; */
   }
 }
 .container {
@@ -308,9 +311,10 @@ h4 {
   background-size: cover;
   position: absolute;
   height: 100%;
-  animation: banner-animation 500ms ease-in-out;
+  /* animation: banner-animation 500ms ease-in-out; */
   /* background-color: #606568; */
   width: 100%;
+  min-height: 445.59px;
   /* background: black; */
   left: 0;
   top: 0;
@@ -358,6 +362,9 @@ h4 {
   .logo {
     width: 300px;
   }
+  .black-back {
+  }
+
   .banner {
     position: absolute;
     width: 100vw;

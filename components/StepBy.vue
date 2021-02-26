@@ -4,7 +4,12 @@
       <div class="step-item">
         <div class="step-index">Step 1</div>
         <p>問い合わせLINE追加/フォーム入力</p>
-        <button style="margin: 0 auto; display: block">始める</button>
+        <button
+          @click="$emit('contact')"
+          style="margin: 0 auto; display: block"
+        >
+          始める
+        </button>
         <!-- <img
           class="step-one"
           width="800"

@@ -8,7 +8,7 @@
         }"
       ></f-a>
     </a>
-    <a href="https://line.com" class="social-item" style="color: white">
+    <a href="https://lin.ee/TCqyNKa" class="social-item" style="color: white">
       <f-a
         :icon="{
           prefix: 'fab',
