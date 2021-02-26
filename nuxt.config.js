@@ -47,7 +47,6 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: [],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
@@ -69,6 +68,11 @@ export default {
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
+  buildModules: [
+    // ['@nuxtjs/google-analytics', {
+    //   id: 'UA-12301-2'
+    // }]
+  ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},

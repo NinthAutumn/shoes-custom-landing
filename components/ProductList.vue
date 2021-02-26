@@ -25,9 +25,7 @@ export default {
       slidesPerView: 'auto',
       spaceBetween: 15,
 
-      autoplay: {
-        // delay: 1000,
-      },
+      autoplay: false,
     },
   }),
 }
