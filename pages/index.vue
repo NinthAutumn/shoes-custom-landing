@@ -3,7 +3,13 @@
     <div class="header-container">
       <div class="header-banner container" style="min-height: 445.59px">
         <div class="black-back"></div>
-        <img class="logo" lazy :src="require('~/assets/logo.png')" alt="" />
+        <img
+          class="logo"
+          width="300"
+          lazy
+          :src="require('~/assets/logo.png')"
+          alt=""
+        />
 
         <div class="header-content">
           <!-- <img
@@ -204,7 +210,7 @@ export default {
   position: relative;
 }
 .header-content {
-  /* animation: appear-header 200ms linear; */
+  animation: appear-header 200ms linear;
 }
 
 @keyframes appear-header {
@@ -314,7 +320,7 @@ h4 {
   background-size: cover;
   position: absolute;
   height: 100%;
-  /* animation: banner-animation 500ms ease-in-out; */
+  animation: banner-animation 200ms ease-in-out;
   /* background-color: #606568; */
   width: 100%;
   min-height: 445.59px;
@@ -448,7 +454,7 @@ h4 {
     right: -10px;
     top: -50px;
     z-index: 1;
-    height: 450px;
+    width: 450px;
     transform: rotate(-10deg);
     border-radius: 1000px;
   }
