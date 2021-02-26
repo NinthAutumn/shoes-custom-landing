@@ -170,7 +170,18 @@ export default {
   }),
   mounted() {
     // const
-    this.observeLines()
+    if (
+      !('IntersectionObserver' in window) ||
+      !('IntersectionObserverEntry' in window) ||
+      !('intersectionRatio' in window.IntersectionObserverEntry.prototype)
+    ) {
+      const list = document.querySelectorAll('.line-horizontal')
+      list.forEach((item) => {
+        item.classList.add('line-in')
+      })
+    } else {
+      this.observeLines()
+    }
   },
   methods: {
     scrollToContact() {
@@ -189,7 +200,6 @@ export default {
       })
       const list = document.querySelectorAll('.line-horizontal')
       list.forEach((item) => {
-        console.log(item)
         observe.observe(item)
       })
     },

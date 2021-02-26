@@ -75,7 +75,35 @@ export default {
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    postcss: {
+      plugins: [
+        // purgecss({
+        //   content: ['./pages/**/*.vue', './layouts/**/*.vue', './components/**/*.vue', './assets/css/main.scss', './plugins/**/*.js',
+        //     './assets/css/index.css', './assets/css/**/*.scss'
+        //   ],
+        //   paths: [
+        //     './pages/**/*.vue', './layouts/**/*.vue', './components/**/*.vue', './assets/css/main.scss', './plugins/**/*.js',
+        //     './assets/css/index.css', './assets/css/**/*.scss'
+        //   ],
+        //   styleExtensions: ["scss", "sass"],
+        //   whitelist: ['html', 'body', 'nuxt-progress', 'a'],
+        //   extractors: [{
+        //     extractor: content => content.match(/[A-z0-9-:\\/]+/g) || [],
+        //     extensions: ['html', 'vue', 'js']
+        //   }]
+        // }),
+        require("postcss-gap-properties")(),
+        require("autoprefixer")({
+          grid: true,
+          flexbox: true,
+          stats: {
+            warnings: false
+          }
+        })
+      ]
+    },
+  },
   server: {
     host: '0.0.0.0'
   }

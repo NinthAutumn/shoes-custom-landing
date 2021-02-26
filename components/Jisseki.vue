@@ -18,7 +18,18 @@
 <script>
 export default {
   mounted() {
-    this.observeLines()
+    if (
+      !('IntersectionObserver' in window) ||
+      !('IntersectionObserverEntry' in window) ||
+      !('intersectionRatio' in window.IntersectionObserverEntry.prototype)
+    ) {
+      const list = document.querySelectorAll('.jisseki-item')
+      list.forEach((item) => {
+        item.classList.add('jisseki-in')
+      })
+    } else {
+      this.observeLines()
+    }
   },
   methods: {
     observeLines() {
@@ -94,6 +105,7 @@ export default {
 @media screen and (min-width: 570px) {
   .jisseki-list {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 'top top' 'left right';
     /* grid-template-rows: 1fr 1fr; */
     gap: 2rem;

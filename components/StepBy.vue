@@ -69,15 +69,24 @@ export default {}
 @media screen and (min-width: 850px) {
   .step-container {
     grid-template-columns: repeat(3, minmax(20rem, 35rem));
-    gap: 20px;
   }
+  /* .step-item {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  } */
 }
 
 @media screen and (max-width: 850px) {
   .step-container {
     grid-template-columns: repeat(1, 1fr);
+
     gap: 20px;
   }
+  /* @supports (display) */
+  /* .step-item {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  } */
 }
 
 .step-item .step-one {
