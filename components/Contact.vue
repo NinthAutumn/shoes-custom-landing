@@ -36,8 +36,13 @@
       />
 
       <label for="email">Eメール</label>
-      <input v-model="form.Eメール" type="email" name="email" placeholder="" />
-      <label for="email">住所</label>
+      <input
+        v-model="form.Eメール"
+        type="email"
+        name="email"
+        placeholder="sample@sample.com"
+      />
+      <label for="住所">住所</label>
       <textarea
         v-model="form.住所"
         type="text"
@@ -78,6 +83,7 @@ export default {
       コンテンツ: '',
       ご用件: '選択してください',
       名前: '',
+      住所: '',
     },
     gcaptcha: '',
     disabled: true,
@@ -112,6 +118,7 @@ export default {
             携帯番号: '',
             コンテンツ: '',
             ご用件: '',
+            住所: '',
           }
         })
         .catch(function (error) {
