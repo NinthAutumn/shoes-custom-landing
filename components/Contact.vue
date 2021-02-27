@@ -42,7 +42,7 @@
         v-model="form.住所"
         type="text"
         name="住所"
-        placeholder="000-0000 &#10;例）東京都血千代田区五番町目6-2 ooビル301"
+        :placeholder="'例）\n〒000-0000\n東京都血千代田区五番町目6-2 ooビル301'"
         cols="30"
         rows="3"
       />

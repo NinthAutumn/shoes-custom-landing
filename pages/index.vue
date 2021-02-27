@@ -86,13 +86,19 @@
         </div>
         <jisseki-card></jisseki-card>
         <!-- <h4></h4> -->
-        <h4 style="padding-left: 0.5rem">お客様の声</h4>
+        <!-- <h4 style="padding-left: 0.5rem"></h4> -->
+      </div>
+      <div class="container">
+        <div class="title">
+          <h3 style="padding-left: 0.5rem">お客様の声</h3>
+          <div class="line-horizontal" style="width: 25rem"></div>
+        </div>
         <testimonial-card></testimonial-card>
       </div>
       <div class="container">
         <div class="title">
           <h3 style="padding-left: 0.5rem">商品の一覧</h3>
-          <div class="line-horizontal" style="width: 24rem"></div>
+          <div class="line-horizontal" style="width: 25rem"></div>
         </div>
         <client-only>
           <product-list></product-list>
