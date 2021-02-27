@@ -71,9 +71,10 @@ input {
   background: white;
   border: none;
   margin: 0 1rem;
-  height: 4.2rem;
+  height: 42px;
   font-weight: bold;
   cursor: pointer;
+  margin: 1rem 0;
   box-shadow: 0 2px 5px 0 rgba(60, 66, 87, 0.12),
     0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
