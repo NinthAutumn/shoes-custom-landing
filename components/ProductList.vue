@@ -4,7 +4,7 @@
     <swiper :options="swiperOptions">
       <swiper-slide v-for="item of list" :key="item.img">
         <div class="img-container">
-          <img :src="item.img" alt="" />
+          <img lazy :src="item.img" alt="" />
         </div>
       </swiper-slide>
     </swiper>
