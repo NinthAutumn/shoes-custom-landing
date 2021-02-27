@@ -5,7 +5,7 @@
         <div class="black-back"></div>
         <img
           class="logo"
-          width="300"
+          width="320"
           lazy
           :src="require('~/assets/logo.png')"
           alt=""
@@ -22,7 +22,9 @@
           <h1>
             世界が認めた日本初の <br />
             ラグジュアリーオーダーシューズブランド
-            <span style="color: var(--secondary-color)">Rio</span>
+            <span style="font-weight: bold; font-size: 4.5rem; color: #b8ab78"
+              >Rio</span
+            >
           </h1>
           <h2>『世界で1番の靴をあなたが創る』</h2>
           <button style="margin-bottom: 0rem" @click="scrollToContact">
@@ -131,40 +133,42 @@ import FooterCard from '~/components/Footer'
 import StepList from '~/components/StepBy'
 import JissekiCard from '~/components/Jisseki'
 import TestimonialCard from '~/components/Testimonial'
+
 export default {
   data: () => ({
     list: [
       {
         title: 'Japanese Form',
-        desc:
-          '至高ヨーロッパモデルを日本人の足に合わせ、こだわりぬいた形を実現',
+        desc: '至高ヨーロッパモデルを日本人の足に合わせ、こだわりの形を実現',
       },
       {
         title: 'Patine',
         desc:
-          '職人が5年の歳月をかけ完成させた、油剤にもこだわった驚きのパティーヌ技術',
+          '職人が5年の歳月をかけ完成させた、油剤にもこだわり抜いた世界最高峰の染色技術',
       },
       {
         title: 'Design',
         desc:
-          'イタリア、スペイン製の革が織りなすシューズのデザイン、<br/>あなたの理想のデザインがきっとある',
+          '本場ヨーロッパの高級感レザーが織りなす美しいデザインは、海外デザイナーも絶賛',
       },
       {
         title: 'Size',
         desc: 'アスリートも認めた豊富なサイズ展開、最大31cm対応',
       },
       {
-        title: 'Color variation',
-        desc: '組合わせ自由の数多くのカラーバリエーション',
+        title: 'Color Variation',
+        desc:
+          'レザーカラーや靴底のカラー、こだわりのカスタマイズで世界に一足のシューズを',
       },
       {
         title: 'Functionality',
-        desc: '長持ちし、足への負担を軽減。履き心地にもこだわる',
+        desc:
+          '特別なフィット感はシューズを長持ちさせ、足や身体への負担を軽減。履き心地も一流に',
       },
       {
         title: 'Low price',
         desc:
-          'オーダーメイドの常識を覆す衝撃の低価格&短納期を実現 <br/>オーダーメイドシューズが¥39,800〜',
+          '独自の生産工程により、オーダーメイドの常識を覆す衝撃の低価格&短納期を実現 <br/>オーダーシューズが¥39,800~',
       },
     ],
   }),
@@ -236,10 +240,12 @@ export default {
 
 .product-log {
   position: absolute;
-  right: 50px;
+  right: 0;
   bottom: 50px;
+  z-index: -1;
   transform: rotate(360deg);
-  /* width: 500px; */
+  width: 450px;
+  opacity: 0.8;
 }
 
 .main-content {
@@ -343,6 +349,26 @@ h4 {
   content: '';
   z-index: -1;
 }
+@media screen and (max-width: 1200px) {
+  .product-log {
+    position: absolute;
+    /* right: 10px; */
+    top: 270px;
+    width: 350px;
+    /* opacity: 0.5; */
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 1059px) {
+  .product-log {
+    position: absolute;
+    /* right: 10px; */
+    top: 270px;
+    width: 350px;
+    opacity: 0.5;
+    z-index: -1;
+  }
+}
 @media screen and (max-width: 988px) {
   .product-log {
     position: absolute;
@@ -350,6 +376,7 @@ h4 {
     top: 270px;
     width: 300px;
     opacity: 0.5;
+    z-index: -1;
   }
 }
 @media screen and (max-width: 750px) {
@@ -362,6 +389,7 @@ h4 {
     top: 250px;
     width: 200px;
     opacity: 0.5;
+    z-index: -1;
   }
   .line-horizontal {
   }
@@ -386,7 +414,7 @@ h4 {
     flex-direction: column;
   }
   .logo {
-    width: 300px;
+    width: 320px;
   }
   .black-back {
   }
@@ -472,7 +500,7 @@ h4 {
     right: -10px;
     top: -50px;
     z-index: 1;
-    width: 450px;
+    width: 550px;
     transform: rotate(-10deg);
     border-radius: 1000px;
   }

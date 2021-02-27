@@ -78,6 +78,7 @@ button {
   padding: 1rem 4rem;
   font-weight: bold;
   cursor: pointer;
-  border: 1px solid var(--primary-color);
+  box-shadow: 0 2px 5px 0 rgba(60, 66, 87, 0.12),
+    0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
 </style>

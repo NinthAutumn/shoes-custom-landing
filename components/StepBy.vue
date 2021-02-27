@@ -3,7 +3,10 @@
     <div class="step-container">
       <div class="step-item">
         <div class="step-index">Step 1</div>
-        <p>問い合わせLINE追加/フォーム入力</p>
+        <p>
+          問い合わせ <br />
+          LINE追加<span style="margin: 0 1rem">・</span>フォーム入力
+        </p>
         <button
           @click="$emit('contact')"
           style="margin: 0 auto; display: block"
@@ -22,19 +25,20 @@
 
       <div class="step-item">
         <div class="step-index">Step 2</div>
-        <p>必要事項のご入力、御来店日の決定</p>
+        <p>必要事項のご入力、 御来店日の決定</p>
       </div>
       <div class="step-item" style="margin-right: 0">
         <div class="step-index">Step 3</div>
-        <p>サロンへ御来店/出張へお伺い</p>
+
+        <p>サロンへ御来店 出張へお伺い</p>
       </div>
       <div class="step-item">
         <div class="step-index">Step 4</div>
-        <p>デザインの選択/サイズ測定</p>
+        <p>デザインの選択 <span style="margin: 0 1rem">&</span> サイズ測定</p>
       </div>
       <div class="step-item">
-        <div class="step-index">Step 5</div>
-        <p>完成　3週〜1ヶ月半でお渡し</p>
+        <div class="step-index">完成</div>
+        <p>3週〜1ヶ月半でお渡し</p>
       </div>
     </div>
   </div>
@@ -69,7 +73,7 @@ export default {}
 }
 @media screen and (min-width: 850px) {
   .step-container {
-    grid-template-columns: repeat(3, minmax(20rem, 35rem));
+    grid-template-columns: repeat(1, 800px);
     /* grid-template-areas: 'main main main'; */
   }
   @supports (gap: 20px) {
@@ -85,7 +89,7 @@ export default {}
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
   .step-container {
     grid-template-columns: repeat(1, 1fr);
     /* grid-template-areas: 'main'; */
@@ -138,5 +142,6 @@ export default {}
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
+  word-break: keep-all;
 }
 </style>
