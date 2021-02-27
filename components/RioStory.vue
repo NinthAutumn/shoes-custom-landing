@@ -168,7 +168,7 @@
         </div>
       </div>
     </div>
-    <button class="read-more" @click="modal = !modal">詳細</button>
+    <button class="read-more" @click="modal = !modal">続きを読む</button>
   </div>
 </template>
 <script>

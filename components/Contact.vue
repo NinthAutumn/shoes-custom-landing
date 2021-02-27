@@ -34,12 +34,17 @@
         name="携帯番号"
         placeholder="07012345678"
       />
+
       <label for="email">Eメール</label>
-      <input
-        v-model="form.Eメール"
-        type="email"
-        name="email"
-        placeholder="sample@sample.com"
+      <input v-model="form.Eメール" type="email" name="email" placeholder="" />
+      <label for="email">住所</label>
+      <textarea
+        v-model="form.住所"
+        type="text"
+        name="住所"
+        placeholder="000-0000 &#10;例）東京都血千代田区五番町目6-2 ooビル301"
+        cols="30"
+        rows="3"
       />
       <label for="コンテンツ">ご予約希望日時（ご質問・お問い合わせ内容）</label>
       <textarea
