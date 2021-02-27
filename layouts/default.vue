@@ -65,6 +65,18 @@ input {
   /* 1 */
   overflow: visible;
 }
+.button-large {
+  font-size: 20px;
+  color: var(--primary-color);
+  background: white;
+  border: none;
+  margin: 0 1rem;
+  height: 4.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(60, 66, 87, 0.12),
+    0 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
 body {
   background: var(--primary-color);
   color: var(--contact-color);

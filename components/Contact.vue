@@ -54,7 +54,7 @@
         @verify="onVerify"
         @expired="onExpired"
       ></vue-recaptcha>
-      <button type="submit">確認</button>
+      <button type="submit" class="button-large">確認</button>
     </form>
     <!-- </client-only> -->
   </div>
