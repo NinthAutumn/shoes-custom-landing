@@ -113,7 +113,6 @@ export default {
       })
         .then((response) => response.json())
         .then((res) => {
-          console.log(res)
           if (res.error) {
             return alert(res.error)
           }
