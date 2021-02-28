@@ -15,10 +15,16 @@
 export default {
   data: () => ({
     list: [
-      { img: require('~/assets/product-1.jpg') },
-      { img: require('~/assets/product-2.jpg') },
-      { img: require('~/assets/banner.jpg') },
-      // { img: require('~/assets/product-3.jpg') },
+      { img: require('~/assets/product-5.jpg') },
+      { img: require('~/assets/product-10.jpg') },
+      { img: require('~/assets/product-6.jpg') },
+      { img: require('~/assets/product-7.jpg') },
+      { img: require('~/assets/product-8.jpg') },
+      { img: require('~/assets/product-9.jpg') },
+
+      // { img: require('~/assets/product-1.jpg') },
+      // { img: require('~/assets/product-2.jpg') },
+      // { img: require('~/assets/banner.jpg') },
     ],
     //Slider configuration [obj]
     swiperOptions: {
@@ -42,14 +48,15 @@ export default {
 }
 
 .product-list .swiper-slide .img-container {
-  padding-top: 71%;
-  /* height: 213px; */
+  /* padding-top: 71%; */
+  height: 100%;
 }
 .product-list .swiper-slide img {
   display: block;
   /* max-width: 100%; */
   max-height: 100%;
-  position: absolute;
+  height: 100%;
+  /* position: absolute; */
   top: 0;
   bottom: 0;
   left: 0;
