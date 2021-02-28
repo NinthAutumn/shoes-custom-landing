@@ -42,13 +42,18 @@ const handler = async (event) => {
       }
     }
     delete data['g-recaptcha-response']
+    const {
+      v1
+    } = require('uuid')
     const msg = {
       to: 'arif.iwamoto@gmail.com', // Change to your recipient
       from: 'site@rio-ordershoes.com', // Change to your verified sender
-      subject: `Rio Shoes　お問い合わせ`,
-      headers: {
-        'X-Customer': data.名前
-      },
+      subject: `Rio Shoes　お問い合わせ - ${v1()}`,
+      // headers: {
+      //   // 'X-Customer': encodeURI(data.名前),
+      //   // 'references': encodeURI(data.名前),
+      // },
+      category: 'transactional',
       // text: 'and easy to do anywhere, even with Node.js',
       html: `${Object.keys(data).reduce((acc,cur)=>{
         return acc += `<p>${cur}: ${data[cur]}</p>`
