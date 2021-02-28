@@ -25,7 +25,7 @@ const handler = async (event) => {
 
     if (res.data) {
       console.log(res.data)
-      if (res.data.success !== 'undefined' || !res.data.success) {
+      if (res.data.success === 'undefined' || !res.data.success) {
         return {
           statusCode: 200,
           body: JSON.stringify({
