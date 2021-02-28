@@ -4,7 +4,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'shoes-custom',
+    title: 'Rio - オーダーシューズブランド',
     meta: [{
         charset: 'utf-8'
       },
@@ -19,7 +19,7 @@ export default {
       }, {
         hid: 'description',
         name: 'description',
-        content: ''
+        content: '世界が認めた日本初のラグジュアリーオーダーシューズブランド Rio | 満足度 99.8%・驚異のリピート予約率96%・注目のオーダーシューズブランド No 1 '
       }
     ],
     link: [{
@@ -69,9 +69,9 @@ export default {
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
   buildModules: [
-    // ['@nuxtjs/google-analytics', {
-    //   id: 'UA-12301-2'
-    // }]
+    ['@nuxtjs/google-analytics', {
+      id: 'G-SGGGFH1H6T'
+    }]
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

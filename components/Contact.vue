@@ -46,10 +46,10 @@
         cols="30"
         rows="3"
       />
-      <label for="コンテンツ">ご予約希望日時（ご質問・お問い合わせ内容）</label>
+      <label for="内容">ご予約希望日時（ご質問・お問い合わせ内容）</label>
       <textarea
-        name="コンテンツ"
-        v-model="form.コンテンツ"
+        name="内容"
+        v-model="form.内容"
         placeholder="ご予約希望日時（ご質問・お問い合わせ内容）"
         cols="30"
         rows="10"
@@ -76,12 +76,12 @@ export default {
   },
   data: () => ({
     form: {
-      Eメール: '',
-      携帯番号: '',
-      コンテンツ: '',
       ご用件: '選択してください',
+      携帯番号: '',
+      Eメール: '',
       名前: '',
       住所: '',
+      内容: '',
     },
     gcaptcha: '',
     disabled: true,
@@ -101,7 +101,12 @@ export default {
       if (this.loading) return alert('投稿中...')
       if (this.disabled) return alert('キャプチャ認証をしてください。')
       this.loading = true
-
+      await this.$ga.event({
+        eventCategory: 'お問い合わせ投稿',
+        eventAction: 'click',
+        eventLabel: 'お問い合わせ投稿',
+        eventValue: 1,
+      })
       await fetch('/.netlify/functions/contact-mail', {
         method: 'POST',
         headers: {
@@ -120,16 +125,17 @@ export default {
           }
           this.$router.push('/contact')
           this.form = {
-            Eメール: '',
-            携帯番号: '',
-            コンテンツ: '',
-            ご用件: '',
-            住所: '',
             ご用件: '選択してください',
+            携帯番号: '',
+            Eメール: '',
+            名前: '',
+            住所: '',
+            内容: '',
           }
         })
         .catch(function (error) {
           console.error(error)
+          alert('お問い合わせに失敗しました。')
         })
         .finally(() => {
           this.loading = false
