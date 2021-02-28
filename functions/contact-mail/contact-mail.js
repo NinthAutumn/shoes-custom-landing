@@ -50,7 +50,7 @@ const handler = async (event) => {
         return acc += `<p>${cur}: ${data[cur]}</p>`
       },'')}`,
     }
-    // await sgMail.send(msg)
+    await sgMail.send(msg)
 
     return {
       statusCode: 200,
