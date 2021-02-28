@@ -60,7 +60,9 @@
         @expired="onExpired"
       ></vue-recaptcha>
       <!-- <div data-netlify-recaptcha="true"></div> -->
-      <button type="submit" class="button-large">確認</button>
+      <button type="submit" class="button-large">
+        {{ loading ? '投稿中...' : '確認' }}
+      </button>
     </form>
     <!-- </client-only> -->
   </div>
