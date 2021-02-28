@@ -6,6 +6,7 @@
       class="contact-form"
       data-netlify-recaptcha="true"
       netlify
+      action="/contact"
       name="contactus"
       data-netlify="true"
     >
