@@ -9,6 +9,7 @@
       action="/contact"
       name="contactus"
       data-netlify="true"
+      method="POST"
     >
       <input type="hidden" name="form-name" value="contactus" />
       <h3 style="text-align: center">お問い合わせ</h3>
