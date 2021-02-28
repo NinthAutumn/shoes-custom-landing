@@ -45,7 +45,10 @@ const handler = async (event) => {
     const msg = {
       to: 'arif.iwamoto@gmail.com', // Change to your recipient
       from: 'site@rio-ordershoes.com', // Change to your verified sender
-      subject: `Rio Shoes　お問い合わせ - ${data.名前}`,
+      subject: `Rio Shoes　お問い合わせ`,
+      headers: {
+        'X-Customer': data.名前
+      },
       // text: 'and easy to do anywhere, even with Node.js',
       html: `${Object.keys(data).reduce((acc,cur)=>{
         return acc += `<p>${cur}: ${data[cur]}</p>`
