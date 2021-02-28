@@ -1,13 +1,21 @@
 <template>
   <div style="width: 100%" class="slides product-list">
     <!-- Using the slider component -->
-    <swiper :options="swiperOptions">
-      <swiper-slide v-for="item of list" :key="item.img">
-        <div class="img-container">
-          <img lazy :src="item.img" alt="" />
+    <div v-swiper:mySwiper="swiperOptions">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="item of list" :key="item.img">
+          <div class="img-container">
+            <img
+              height="300"
+              width="300"
+              loading="lazy"
+              :src="item.img"
+              alt="靴商品画像"
+            />
+          </div>
         </div>
-      </swiper-slide>
-    </swiper>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -15,12 +23,12 @@
 export default {
   data: () => ({
     list: [
-      { img: require('~/assets/product-5.jpg') },
-      { img: require('~/assets/product-10.jpg') },
-      { img: require('~/assets/product-6.jpg') },
-      { img: require('~/assets/product-7.jpg') },
-      { img: require('~/assets/product-8.jpg') },
-      { img: require('~/assets/product-9.jpg') },
+      { img: require('~/assets/product-5.jpeg') },
+      { img: require('~/assets/product-10.jpeg') },
+      { img: require('~/assets/product-6.jpeg') },
+      { img: require('~/assets/product-7.jpeg') },
+      { img: require('~/assets/product-8.jpeg') },
+      { img: require('~/assets/product-9.jpeg') },
 
       // { img: require('~/assets/product-1.jpg') },
       // { img: require('~/assets/product-2.jpg') },

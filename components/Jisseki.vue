@@ -2,14 +2,29 @@
   <div class="jisseki-card">
     <div class="jisseki-list">
       <div class="jisseki-item jisseki-item--one">
-        <img :src="require('~/assets/award-1.png')" alt="" />
+        <img
+          height="223"
+          width="250"
+          :src="require('~/assets/award-1.png')"
+          alt="アワードバナー1"
+        />
       </div>
 
       <div class="jisseki-item jisseki-item--two">
-        <img :src="require('~/assets/award-2.png')" alt="" />
+        <img
+          height="223"
+          width="250"
+          :src="require('~/assets/award-2.png')"
+          alt="アワードバナー2"
+        />
       </div>
       <div class="jisseki-item jisseki-item--three" style="margin-right: 0">
-        <img :src="require('~/assets/award-3.png')" alt="" />
+        <img
+          height="223"
+          width="250"
+          :src="require('~/assets/award-3.png')"
+          alt="アワードバナー3"
+        />
       </div>
     </div>
   </div>

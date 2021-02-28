@@ -6,9 +6,8 @@
         <img
           class="logo"
           width="320"
-          lazy
           :src="require('~/assets/logo.png')"
-          alt=""
+          alt="Rio　カンパニーロゴ"
         />
 
         <div class="header-content">
@@ -57,7 +56,7 @@
           class="product-log"
           lazy
           :src="require('~/assets/logo.png')"
-          alt=""
+          alt="Rio　カンパニーロゴ"
         />
         <!-- <div class="feature-product feature-product--3">
           <div class="feature-container">
@@ -100,9 +99,7 @@
           <h3 style="padding-left: 0.5rem">商品の一覧</h3>
           <div class="line-horizontal" style="width: 25rem"></div>
         </div>
-        <client-only>
-          <product-list></product-list>
-        </client-only>
+        <product-list></product-list>
       </div>
       <div class="container">
         <div class="title">
