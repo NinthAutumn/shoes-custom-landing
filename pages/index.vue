@@ -26,7 +26,7 @@
               >Rio</span
             >
           </h1>
-          <h2>『世界で1番の靴をあなたが創る』</h2>
+          <h2>『世界で一番の靴をあなたが創る』</h2>
           <button style="margin-bottom: 0rem" @click="scrollToContact">
             ご購入へ
           </button>

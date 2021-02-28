@@ -58,7 +58,7 @@ export default {
 }
 .jisseki-in {
   visibility: visible !important;
-  animation-delay: 50ms;
+  /* animation-delay: 50ms; */
   animation: jisseki 300ms ease-in-out;
 }
 
