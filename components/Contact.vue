@@ -1,9 +1,10 @@
 <template>
   <div id="contact">
     <!-- <client-only> -->
+    <!-- @submit.prevent="submitForm" -->
     <form
-      @submit.prevent="submitForm"
       class="contact-form"
+      data-netlify-recaptcha="true"
       netlify
       name="contactus"
       data-netlify="true"
@@ -59,11 +60,12 @@
         cols="30"
         rows="10"
       ></textarea>
-      <vue-recaptcha
+      <!-- <vue-recaptcha
         sitekey="6Lch9GYaAAAAAOZZUlcT_ErBuxLIFy-rtcOdmoW5"
         @verify="onVerify"
         @expired="onExpired"
-      ></vue-recaptcha>
+      ></vue-recaptcha> -->
+      <div data-netlify-recaptcha="true"></div>
       <button type="submit" class="button-large">確認</button>
     </form>
     <!-- </client-only> -->
@@ -71,10 +73,10 @@
 </template>
 
 <script>
-import VueRecaptcha from 'vue-recaptcha'
+// import VueRecaptcha from 'vue-recaptcha'
 export default {
   components: {
-    VueRecaptcha,
+    // VueRecaptcha,
   },
   data: () => ({
     form: {
@@ -89,15 +91,15 @@ export default {
     disabled: true,
   }),
   methods: {
-    onVerify(response) {
-      this.gcaptcha = response //レスポンスのトークンをセット
-      this.disabled = false
-    },
-    onExpired() {
-      this.gcaptcha = '' //レスポンスのトークンを空に戻す
-      // this.recaptcha.setflag = false //フラグを下す
-      this.disabled = true //submitボタンをdisabledに
-    },
+    // onVerify(response) {
+    //   this.gcaptcha = response //レスポンスのトークンをセット
+    //   this.disabled = false
+    // },
+    // onExpired() {
+    //   this.gcaptcha = '' //レスポンスのトークンを空に戻す
+    //   // this.recaptcha.setflag = false //フラグを下す
+    //   this.disabled = true //submitボタンをdisabledに
+    // },
     async submitForm() {
       if (this.disabled) return alert('キャプチャ認証をしてください。')
       await fetch('https://submit-form.com/qIqvkwiC', {
