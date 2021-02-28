@@ -43,7 +43,7 @@ const handler = async (event) => {
     }
     delete data['g-recaptcha-response']
     const msg = {
-      to: 'arif.iwamoto@gmail.com', // Change to your recipient
+      to: 'info@a-starone.com', // Change to your recipient
       from: 'site@rio-ordershoes.com', // Change to your verified sender
       subject: 'Rio Shoes　お問い合わせ',
       // text: 'and easy to do anywhere, even with Node.js',
