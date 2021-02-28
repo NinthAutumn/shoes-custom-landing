@@ -17,6 +17,10 @@ export default {}
 </script>
 
 <style>
+.contact-page h1 {
+  font-size: 3rem;
+  z-index: 2;
+}
 .contact-page {
   width: 100%;
   display: flex;

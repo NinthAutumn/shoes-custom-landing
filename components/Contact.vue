@@ -2,15 +2,7 @@
   <div id="contact">
     <!-- <client-only> -->
     <!-- @submit.prevent="submitForm" -->
-    <form
-      class="contact-form"
-      data-netlify-recaptcha="true"
-      netlify
-      action="/contact"
-      name="contactus"
-      data-netlify="true"
-      method="POST"
-    >
+    <form class="contact-form" @submit.prevent="submitForm" name="contactus">
       <input type="hidden" name="form-name" value="contactus" />
       <h3 style="text-align: center">お問い合わせ</h3>
       <label for="ご用件">ご用件</label>
@@ -38,11 +30,11 @@
         placeholder="07012345678"
       />
 
-      <label for="email">Eメール</label>
+      <label for="Eメール">Eメール</label>
       <input
         v-model="form.Eメール"
         type="email"
-        name="email"
+        name="Eメール"
         placeholder="sample@sample.com"
       />
       <label for="住所">住所</label>
@@ -62,12 +54,12 @@
         cols="30"
         rows="10"
       ></textarea>
-      <!-- <vue-recaptcha
-        sitekey="6Lch9GYaAAAAAOZZUlcT_ErBuxLIFy-rtcOdmoW5"
+      <vue-recaptcha
+        sitekey="6LfsVGsaAAAAAGzUwA1KeS0jv8eQh_u0yjqxqEau"
         @verify="onVerify"
         @expired="onExpired"
-      ></vue-recaptcha> -->
-      <div data-netlify-recaptcha="true"></div>
+      ></vue-recaptcha>
+      <!-- <div data-netlify-recaptcha="true"></div> -->
       <button type="submit" class="button-large">確認</button>
     </form>
     <!-- </client-only> -->
@@ -75,14 +67,14 @@
 </template>
 
 <script>
-// import VueRecaptcha from 'vue-recaptcha'
+import VueRecaptcha from 'vue-recaptcha'
 export default {
   components: {
-    // VueRecaptcha,
+    VueRecaptcha,
   },
   data: () => ({
     form: {
-      email: '',
+      Eメール: '',
       携帯番号: '',
       コンテンツ: '',
       ご用件: '選択してください',
@@ -91,20 +83,24 @@ export default {
     },
     gcaptcha: '',
     disabled: true,
+    loading: false,
   }),
   methods: {
-    // onVerify(response) {
-    //   this.gcaptcha = response //レスポンスのトークンをセット
-    //   this.disabled = false
-    // },
-    // onExpired() {
-    //   this.gcaptcha = '' //レスポンスのトークンを空に戻す
-    //   // this.recaptcha.setflag = false //フラグを下す
-    //   this.disabled = true //submitボタンをdisabledに
-    // },
+    onVerify(response) {
+      this.gcaptcha = response //レスポンスのトークンをセット
+      this.disabled = false
+    },
+    onExpired() {
+      this.gcaptcha = '' //レスポンスのトークンを空に戻す
+      // this.recaptcha.setflag = false //フラグを下す
+      this.disabled = true //submitボタンをdisabledに
+    },
     async submitForm() {
+      if (this.loading) return alert('投稿中...')
       if (this.disabled) return alert('キャプチャ認証をしてください。')
-      await fetch('https://submit-form.com/qIqvkwiC', {
+      this.loading = true
+
+      await fetch('/.netlify/functions/contact-mail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -112,21 +108,30 @@ export default {
         },
         body: JSON.stringify({
           ...this.form,
-          // 'g-recaptcha-response': this.gcaptcha,
+          'g-recaptcha-response': this.gcaptcha,
         }),
       })
-        .then(() => {
-          alert('お問い合わせありがとうございます。')
+        .then((response) => response.json())
+        .then((res) => {
+          console.log(res)
+          if (res.error) {
+            return alert(res.error)
+          }
+          this.$router.push('/contact')
           this.form = {
-            email: '',
+            Eメール: '',
             携帯番号: '',
             コンテンツ: '',
             ご用件: '',
             住所: '',
+            ご用件: '選択してください',
           }
         })
         .catch(function (error) {
           console.error(error)
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
   },
