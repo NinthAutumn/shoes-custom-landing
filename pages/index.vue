@@ -54,7 +54,7 @@
         </ol>
         <img
           class="product-log"
-          lazy
+          loading="lazy"
           :src="require('~/assets/logo.png')"
           alt="Rio　カンパニーロゴ"
         />
