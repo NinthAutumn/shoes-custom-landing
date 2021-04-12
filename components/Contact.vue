@@ -101,12 +101,12 @@ export default {
       if (this.loading) return alert('投稿中...')
       if (this.disabled) return alert('キャプチャ認証をしてください。')
       this.loading = true
-      await this.$ga.event({
-        eventCategory: 'お問い合わせ投稿',
-        eventAction: 'click',
-        eventLabel: 'お問い合わせ投稿',
-        eventValue: 1,
-      })
+      // await this.$ga.event({
+      //   eventCategory: 'お問い合わせ投稿',
+      //   eventAction: 'click',
+      //   eventLabel: 'お問い合わせ投稿',
+      //   eventValue: 1,
+      // })
       await fetch('/.netlify/functions/contact-mail', {
         method: 'POST',
         headers: {
