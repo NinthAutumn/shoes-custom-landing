@@ -1,7 +1,10 @@
 <template>
   <div class="page">
     <div class="header-container">
-      <div class="header-banner container" style="min-height: 445.59px">
+      <div
+        class="header-banner container"
+        style="min-height: 445.59px"
+      >
         <div class="black-back"></div>
         <img
           class="logo"
@@ -16,19 +19,20 @@
             lazy
             :src="require('~/assets/banner.jpg')"
             alt=""
-          /> -->
+          />-->
           <!-- <img :src="require('~/assets/banner2.jpg')" alt="" class="banner2" /> -->
           <h1>
-            世界が認めた日本初の <br />
-            ラグジュアリーオーダーシューズブランド
-            <span style="font-weight: bold; font-size: 4.5rem; color: #b8ab78"
-              >Rio</span
-            >
+            世界が認めた日本初の
+            <br />ラグジュアリーオーダーシューズブランド
+            <span
+              style="font-weight: bold; font-size: 4.5rem; color: #b8ab78"
+            >Rio</span>
           </h1>
           <h2>『世界で一番の靴をあなたが創る』</h2>
-          <button style="margin-bottom: 0rem" @click="scrollToContact">
-            ご購入へ
-          </button>
+          <button
+            style="margin-bottom: 0rem"
+            @click="scrollToContact"
+          >ご購入へ</button>
         </div>
       </div>
     </div>
@@ -38,18 +42,28 @@
       <div class="container">
         <div class="title">
           <h3 style="padding-left: 0.5rem">
-            <span style="color: var(--secondary-color); font-style: italic"
-              >Rio Shoes</span
-            >
+            <span
+              style="color: var(--secondary-color); font-style: italic"
+            >Rio Shoes</span>
             7つの特徴
           </h3>
-          <div class="line-horizontal" style="width: 40rem"></div>
+          <div
+            class="line-horizontal"
+            style="width: 40rem"
+          ></div>
         </div>
 
         <ol class="feature-list">
-          <li class="feature-item" v-for="(item, index) of list" :key="index">
+          <li
+            class="feature-item"
+            v-for="(item, index) of list"
+            :key="index"
+          >
             <h4 class="feature-title">{{ index + 1 }}, {{ item.title }}</h4>
-            <p class="feature-desc" v-html="item.desc"></p>
+            <p
+              class="feature-desc"
+              v-html="item.desc"
+            ></p>
           </li>
         </ol>
         <img
@@ -63,25 +77,28 @@
             <img :src="require('~/assets/banner.jpg')" />
             <p>商品説明ーー型</p>
           </div>
-        </div> -->
+        </div>-->
         <!-- <div class="feature-product feature-product--1">
           <div class="feature-container">
             <img :src="require('~/assets/product-2.jpg')" />
 
             <p>商品説明ーー型</p>
           </div>
-        </div> -->
+        </div>-->
         <!-- <div class="feature-product feature-product--2">
           <div class="feature-container">
             <p>商品説明ーー型</p>
             <img :src="require('~/assets/product-1.jpg')" />
           </div>
-        </div> -->
+        </div>-->
       </div>
       <div class="container">
         <div class="title">
           <h3 style="padding-left: 0.5rem">実績</h3>
-          <div class="line-horizontal" style="width: 15rem"></div>
+          <div
+            class="line-horizontal"
+            style="width: 15rem"
+          ></div>
         </div>
         <jisseki-card></jisseki-card>
         <!-- <h4></h4> -->
@@ -90,34 +107,46 @@
       <div class="container">
         <div class="title">
           <h3 style="padding-left: 0.5rem">お客様の声</h3>
-          <div class="line-horizontal" style="width: 25rem"></div>
+          <div
+            class="line-horizontal"
+            style="width: 25rem"
+          ></div>
         </div>
         <testimonial-card></testimonial-card>
       </div>
       <div class="container">
         <div class="title">
           <h3 style="padding-left: 0.5rem">商品の一覧</h3>
-          <div class="line-horizontal" style="width: 25rem"></div>
+          <div
+            class="line-horizontal"
+            style="width: 25rem"
+          ></div>
         </div>
         <product-list></product-list>
       </div>
       <div class="container">
         <div class="title">
           <h3 style="padding-left: 0.5rem">
-            <span style="color: var(--secondary-color); font-style: italic"
-              >Rio's </span
-            >Story
+            <span
+              style="color: var(--secondary-color); font-style: italic"
+            >Rio's</span>Story
           </h3>
-          <div class="line-horizontal" style="width: 24rem"></div>
+          <div
+            class="line-horizontal"
+            style="width: 24rem"
+          ></div>
         </div>
         <rio-story></rio-story>
       </div>
       <div class="container">
         <div class="title">
           <h3 style="padding-left: 0.5rem">購入の流れ</h3>
-          <div class="line-horizontal" style="width: 25rem"></div>
+          <div
+            class="line-horizontal"
+            style="width: 25rem"
+          ></div>
         </div>
-        <step-list @contact="scrollToContact"> </step-list>
+        <step-list @contact="scrollToContact"></step-list>
       </div>
       <contact-form></contact-form>
     </main>
@@ -146,13 +175,11 @@ export default {
       },
       {
         title: 'Patine',
-        desc:
-          '職人が5年の歳月をかけ完成させた、油剤にもこだわり抜いた世界最高峰の染色技術',
+        desc: '職人が5年の歳月をかけ完成させた、油剤にもこだわり抜いた世界最高峰の染色技術',
       },
       {
         title: 'Design',
-        desc:
-          '本場ヨーロッパの高級感レザーが織りなす美しいデザインは、海外デザイナーも絶賛',
+        desc: '本場ヨーロッパの高級感レザーが織りなす美しいデザインは、海外デザイナーも絶賛',
       },
       {
         title: 'Size',
@@ -160,18 +187,15 @@ export default {
       },
       {
         title: 'Color Variation',
-        desc:
-          'レザーカラーや靴底のカラー、こだわりのカスタマイズで世界に一足のシューズを',
+        desc: 'レザーカラーや靴底のカラー、こだわりのカスタマイズで世界に一足のシューズを',
       },
       {
         title: 'Functionality',
-        desc:
-          '特別なフィット感はシューズを長持ちさせ、足や身体への負担を軽減。履き心地も一流に',
+        desc: '特別なフィット感はシューズを長持ちさせ、足や身体への負担を軽減。履き心地も一流に',
       },
       {
         title: 'Low price',
-        desc:
-          '独自の生産工程により、オーダーメイドの常識を覆す衝撃の低価格&短納期を実現 <br/>オーダーシューズが¥39,800~',
+        desc: '独自の生産工程により、オーダーメイドの常識を覆す衝撃の低価格&短納期を実現 <br/>オーダーシューズが¥39,800~',
       },
     ],
   }),
@@ -448,6 +472,9 @@ h4 {
     margin: 1.5rem 0;
     padding: 1.5rem 5rem;
   }
+}
+.header-container {
+  max-width: 100%;
 }
 
 @media screen and (min-width: 1126px) {
