@@ -1,5 +1,5 @@
 # shoes-custom
-
+https://silly-ride-705071.netlify.app
 ## Build Setup
 
 ```bash
@@ -17,4 +17,4 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+# SSG Site for custom shoe maker.
