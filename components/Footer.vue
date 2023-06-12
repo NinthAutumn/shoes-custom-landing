@@ -1,19 +1,11 @@
 <template>
   <footer class="footer">
-    <img height="200" :src="require('~/assets/logo.png')" alt="" />
+    <img
+      height="200"
+      :src="require('~/assets/logo.png')"
+      alt
+    />
     <div class="footer-info">
-      <div class="footer-address">
-        A-starOne International株式会社
-        <br />
-        〒100-0005
-        <br />
-        東京都千代田区丸の内1-8-3
-        <br />
-        丸の内トラストタワー本館20F
-        <br />
-        Tel/Fax 03-6822-3397
-      </div>
-
       <p></p>
     </div>
   </footer>

@@ -10,7 +10,7 @@
           class="logo"
           width="320"
           :src="require('~/assets/logo.png')"
-          alt="Rio　カンパニーロゴ"
+          alt="カンパニーロゴ"
         />
 
         <div class="header-content">
